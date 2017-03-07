@@ -1,0 +1,15 @@
+.theme-default {
+  //..
+
+  @include respond-to('small') {
+    //..
+  }
+
+  @include respond-to('medium') {
+    //..
+  }
+
+  @include respond-to('large') {
+    //..
+  }
+}

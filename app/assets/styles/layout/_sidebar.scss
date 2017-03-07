@@ -1,0 +1,6 @@
+@include respond-to('large') {
+  .sidebar {
+    float: right;
+    width: 25%;
+  }
+}

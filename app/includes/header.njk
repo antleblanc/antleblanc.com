@@ -1,0 +1,49 @@
+<header class="header" id="header" role="banner">
+
+    <nav class="banner" id="navigation" role="navigation">
+
+        <a class="site-logo" href="/" title="Développeur UX à Lille">
+            <span>Antoine Leblanc</span>
+        </a>
+        <!-- /.site-logo -->
+
+        <ul class="banner-social">
+            <li class="banner-social__item">
+                <a href="https://twitter.com/antleblanc" title="Me suivre sur Twitter">
+                    <img class="banner-social__image" style="height: 34px;" src="assets/svg/social/twitter.svg" alt="Twitter">
+                </a>
+            </li>
+            <li class="banner-social__item">
+                <a href="https://github.com/antleblanc" title="Mes dépôts sur GitHub">
+                    <img class="banner-social__image" style="height: 34px;" src="assets/svg/social/github.svg" alt="GitHub">
+                </a>
+            </li>
+        </ul>
+        <!-- /.banner-social -->
+
+        <ul class="banner-navigation">
+            {% for item in navigation_bar %}
+            <li class="banner-navigation__item{% if item[0] == active_page %} active{% endif%}">
+                <a href="/{{ item[2] }}" title="{{ item[3] }}">{{ item[1] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <!-- /.banner-navigation -->
+
+        {#
+        <ul class="banner-download">
+            <li class="banner-download__item">
+                <a class="button" href="curriculum-vitae.pdf" title="Télécharger mon CV" download="antoine-leblanc-curriculum-vitae" target="_blank">
+                    <i class="fa fa-download"></i>
+                    <span>Télécharger mon CV</span>
+                </a>
+            </li>
+        </ul>
+        <!-- /.banner-download -->
+        #}
+
+    </nav>
+    <!-- /.banner -->
+
+</header>
+<!-- /.header -->

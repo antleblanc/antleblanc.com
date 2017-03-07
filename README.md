@@ -1,0 +1,62 @@
+# [![screenshot](media/screenshot.png)](https://antleblanc.me)
+
+> My resume.
+
+## Table of Contents
+
+- [Install](#install)
+- [Usage](#usage)
+- [Resources](#resources)
+- [Related](#related)
+- [License](#license)
+
+## Install
+
+```sh
+$ cd ~/Sites
+$ git clone https://github.com/antleblanc/antleblanc.me
+$ cd antleblanc.me
+$ yarn install # it will run `bower install` under the hood.
+```
+
+## Usage
+
+#### Developement
+
+```sh
+$ npm run start
+```
+
+#### Build
+
+```sh
+$ npm run build
+```
+
+#### Test
+
+```sh
+$ npm run test
+```
+
+#### Deployment
+
+```sh
+$ npm run publish
+```
+
+## Resources
+
+- [Google Web Starter Kit](https://github.com/google/web-start-kit)
+- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) & [Mobile Boilerplate](https://github.com/h5bp/mobile-boilerplate)
+- [Yeoman](http://yeoman.io): [Generator Gulp Webapp](https://github.com/yeoman/generator-gulp-webapp)
+
+## Related
+
+- [dotfiles](https://github.com/antleblanc/dotfiles) — My dotfiles
+- [sublime-text-3-preferences](https://github.com/antleblanc/sublime-text-3-preferences) — Sublime Text 3 User preferences
+- [sass-boilerplate](https://github.com/antleblanc/sass-boilerplate) — Sass boilerplate
+
+## License
+
+MIT &copy; [Antoine Leblanc](https://antleblanc.me)

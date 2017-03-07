@@ -1,0 +1,22 @@
+.content {
+  flex: 1;
+}
+
+.page-main {
+  padding: 60px 20px;
+  margin: 0 auto;
+}
+
+@include respond-to('small') {
+  .page-main {
+    padding: 80px 0 100px;
+
+    width: 600px;
+  }
+}
+
+@include respond-to('medium') {
+  .page-main {
+    width: 800px;
+  }
+}

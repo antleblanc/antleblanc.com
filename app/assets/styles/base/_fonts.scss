@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'MochaMattari';
+  src: font('MochaMattari.eot');
+  src: font('MochaMattari.eot?#iefix') format('embedded-opentype'),
+       font('MochaMattari.woff') format('woff'),
+       font('MochaMattari.ttf') format('truetype');
+}

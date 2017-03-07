@@ -1,0 +1,15 @@
+{
+  "version": "0.0.0",
+  "name": "antleblanc",
+  "launch_path": "/index.html",
+  "description": "My resume.",
+  "icons": {
+    "60": "assets/images/favicons/firefox_app_60x60.png",
+    "128": "assets/images/favicons/firefox_app_128x128.png",
+    "512": "assets/images/favicons/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Antoine Leblanc",
+    "url": "antleblanc.me"
+  }
+}

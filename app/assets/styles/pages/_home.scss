@@ -1,0 +1,258 @@
+.page-home {
+  //..
+
+  @include respond-to('small') {
+    //..
+  }
+
+  @include respond-to('medium') {
+    //..
+  }
+
+  @include respond-to('large') {
+    //..
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Hero
+// -----------------------------------------------------------------------------
+
+.hero {
+  padding-bottom: 0;
+  min-height: inherit;
+  text-align: center;
+  overflow: visible;
+
+  @include respond-to('small') {
+    text-align: center;
+  }
+}
+
+.hero__title {
+  margin: 0;
+
+  font-family: $text-font-stack;
+  font-size: 2.6rem;
+  font-weight: 300;
+
+
+  @include respond-to('small') {
+    font-size: 2.875rem;
+  }
+}
+
+.hero__image {
+  display: block;
+
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  z-index: 10;
+
+  border-radius: 50%;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, .4);
+  transform: translateX(-50%);
+}
+
+
+// -----------------------------------------------------------------------------
+// About
+// -----------------------------------------------------------------------------
+
+.about {
+  > .section__content {
+    > p:nth-last-of-type(2) a {
+      font-weight: 700;
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Experiences
+// -----------------------------------------------------------------------------
+
+.experiences {
+  &::before {
+    content: '\f085';
+
+    display: block;
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    font-family: 'FontAwesome';
+    font-size: 21.625rem;
+
+    color: $light-grey;
+
+    transform: translate(-30%, -30%);
+
+    visibility: hidden;
+
+    @include respond-to('medium') {
+      visibility: visible;
+    }
+  }
+
+  .section__title,
+  .section__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .section__content::before {
+    content: '';
+
+    display: inline-block;
+    width: 6px;
+    min-height: 100%;
+
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    bottom: -100px;
+
+    background-color: $light-grey;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Skills
+// -----------------------------------------------------------------------------
+
+.skills {
+
+}
+
+.skills-container {
+  margin: 0 auto;
+
+  @include respond-to('medium') {
+    max-width: 990px;
+  }
+
+  @include respond-to('large') {
+    max-width: 1200px;
+  }
+}
+
+.skills-list {
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  @include respond-to('small') {
+    white-space: nowrap;
+  }
+
+  + .skills-list {
+    margin-top: 40px;
+  }
+}
+
+.skills-list ~ .section__title {
+  @include respond-to('small') {
+    margin-top: 100px;
+  }
+}
+
+.skill {
+  display: inline-block;
+
+  float: left;
+
+  padding: 0 20px;
+  margin-bottom: 60px;
+
+  width: 50%;
+
+  @include respond-to('small') {
+    width: 25%;
+  }
+
+  @include respond-to('medium') {
+    width: 12.5%;
+  }
+
+  @include when-inside('.skills-list--centered') {
+    float: none;
+  }
+}
+
+.skill__title {
+  margin: 0;
+  font-size: 1rem;
+  color: $light-grey;
+}
+
+.skill__description {
+  margin: 0;
+
+  font-family: $text-font-stack-alt;
+  font-size: .75rem;
+  font-weight: normal;
+  font-style: italic;
+
+  color: $mid-grey;
+}
+
+.skill__image {
+  display: inline-block;
+  margin-top: 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+// -----------------------------------------------------------------------------
+// Formations
+// -----------------------------------------------------------------------------
+
+.formations {
+  &::before {
+    content: '\f19d';
+
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    font-family: 'FontAwesome';
+    font-size: 21.625rem;
+
+    transform: translate(20%, 30%);
+
+    visibility: hidden;
+
+    @include respond-to('medium') {
+      visibility: visible;
+    }
+  }
+
+  .section-title,
+  .section-content {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.formation-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.formation-listItem + .formation-listItem {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px dashed rgba(38, 50, 56, .1);
+}

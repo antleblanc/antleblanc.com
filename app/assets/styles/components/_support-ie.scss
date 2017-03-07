@@ -1,0 +1,16 @@
+$background-browserupgrade: #f0ad4e;
+
+.browserupgrade {
+  margin: 0 auto;
+  padding: 10px 0;
+
+  width: 100%;
+
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+
+  background-color: $background-browserupgrade;
+
+  text-align: center;
+}

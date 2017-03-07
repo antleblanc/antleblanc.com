@@ -1,0 +1,321 @@
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+<section class="section hero" id="hero">
+    <h1 class="hero__title">Développeur UX</h1>
+    <img class="hero__image" src="assets/images/antleblanc-photo.png" height="120" width="120" alt="Antoine Leblanc">
+</section>
+<!-- /.hero -->
+
+<section class="section about" id="about">
+    <h2 class="section__title">À propos</h2>
+    <div class="section__content">
+        <p>
+            Attiré par l’informatique et l’univers du web depuis de nombreuses années,
+            je me passionne tout particulièrement pour le développement et l’intégration web.
+        </p>
+        <p>
+            J’aime expérimenter, découvrir et apprendre au fur et à mesure des projets
+            et aussi contribuer sur des projets <a href="https://github.com/antleblanc" target="_blank" title="Mes dépôts GitHub (nouvelle fenêtre)">open-source</a>.
+        </p>
+        <p>
+            Actuellement je travaille chez <a href="https://www.ovh.com" target="_blank" title="OVH (nouvelle fenêtre)">OVH</a>, une société
+            d’hébergement Internet où j’y occupe le poste
+            de <strong>Développeur UX</strong><sup>1</sup>.
+        </p>
+        <p style="font-size: 0.6875rem"><sup>1</sup> <em>User eXperience</em></p>
+    </div>
+</section>
+<!-- /.about -->
+
+<section class="section section--gray experiences" id="experiences">
+    <h2 class="section__title">Expériences</h2>
+    <div class="section__content">
+        <div class="card">
+            <div class="card-heading">
+                <a href="https://www.ovh.com" target="_blank" title="OVH (nouvelle fenêtre)">
+                    <img class="card__logo" src="assets/images/experiences/logo-ovh.svg" height="76" width="76" alt="OVH">
+                </a>
+                <span class="card__date">2016</span>
+                <h3 class="card__title">OVH</h3>
+                <h4 class="card__subtitle">Développeur UX<br>({{ experiencesOvh }} mois)</h4>
+            </div>
+            <div class="card-content">
+                <ul class="card-list">
+                    <li class="card-list__item">Développement des interfaces clients.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-heading">
+                <a href="http://konfiture.com" target="_blank" title="Agence de communication konfiture (nouvelle fenêtre)">
+                    <img class="card__logo" src="assets/images/experiences/logo-konfiture.png" height="76" width="76" alt="Agence de communication konfiture">
+                </a>
+                <span class="card__date">2011</span>
+                <h3 class="card__title">Agence konfiture</h3>
+                <h4 class="card__subtitle">Développeur Front-End Web<br>({{ experiencesKonfiture }} ans)</h4>
+            </div>
+
+            <div class="card-content">
+                <ul class="card-list">
+                    <li class="card-list__item">Développement de sites web responsives.</li>
+                    <li class="card-list__item">Développement et maintenance de thèmes WordPress.</li>
+                    <li class="card-list__item">Développement et maintenance de plugins WordPress.</li>
+                    <li class="card-list__item">Maintenance de serveurs web dédiés. <small>(Debian/Ubuntu)</small>.</li>
+                    <li class="card-list__item">Maintenance d’applications web <small>(Symfony2.x &amp; Silex)</small>.</li>
+                    <li class="card-list__item">Maintenance de thèmes Shopify.</li>
+                    <li class="card-list__item">Intégration d’emailing.</li>
+                    <li class="card-list__item">Installation et configuration de boutiques PrestaShop.</li>
+                    <li class="card-list__item">
+                        <span class="label label--info">Formation</span>&nbsp;Abode Photoshop
+                    </li>
+                    <li class="card-list__item">
+                        <span class="label label--info">Formation</span>&nbsp;<small>jQuery</small>
+                    </li>
+                </ul>
+             </div>
+        </div>
+
+        <div class="card">
+            <div class="card-heading">
+                <a href="http://konfiture.com" target="_blank" title="Agence de communication konfiture (nouvelle fenêtre)">
+                    <img class="card__logo" src="assets/images/experiences/logo-konfiture.png" height="76" width="76" alt="Agence de communication konfiture">
+                </a>
+                <span class="card__date">2011</span>
+                <h3 class="card__title">Agence konfiture</h3>
+                <h4 class="card__subtitle">Développeur Web<br>(Stage de 3 mois)</h4>
+            </div>
+
+            <div class="card-content">
+                <ul class="card-list">
+                    <li class="card-list__item">Intégration de maquettes Abode Photoshop.</li>
+                    <li class="card-list__item">Développement de thèmes WordPress.</li>
+                    <li class="card-list__item">Maintenance des sites statiques &amp; dynamiques.</li>
+                    <li class="card-list__item">Participation à la maintenance d’applications symfony 1.4.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.experiences -->
+
+<section class="section section--dark skills" id="skills">
+    <h2 class="section__title">Compétences</h2>
+    <div class="skills-container">
+        <ul class="skills-list">
+            <li class="skill">
+                <h4 class="skill__title">HTML</h4>
+                <h5 class="skill__description">xHTML/HTML5</h5>
+                <svg class="skill__image">
+                    <title>HTML 5</title>
+                    <desc>Blabla</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#html5"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">CSS</h4>
+                <h5 class="skill__description">Sass/SCSS &amp; LESS</h5>
+                <svg class="skill__image">
+                    <title>Sass</title>
+                    <desc>Préprocesseur CSS.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#sass"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">JavaScript</h4>
+                <h5 class="skill__description">Angular, jQuery</h5>
+                <svg class="skill__image">
+                    <title>Javascript</title>
+                    <desc>Langage de programmation de scripts.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#javascript"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">PHP</h4>
+                <h5 class="skill__description">POO</h5>
+                <svg class="skill__image">
+                    <title>PHP</title>
+                    <desc>Langage de programmation.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#php"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Yeoman</h4>
+                <h5 class="skill__description">Scaffold</h5>
+                <svg class="skill__image">
+                    <title>Yeoman</title>
+                    <desc>Outil d’échafaudage du web pour les webapps modernes.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#yeoman"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Bower</h4>
+                <h5 class="skill__description">Package manager</h5>
+                <svg class="skill__image">
+                    <title>Bower</title>
+                    <desc>Gestionnaire de dépendances.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#bower"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Grunt</h4>
+                <h5 class="skill__description">Task runner</h5>
+                <svg class="skill__image">
+                    <title>Grunt.js</title>
+                    <desc>Outil de création de tâches automatisées.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#grunt"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">gulp</h4>
+                <h5 class="skill__description">Build system</h5>
+                <svg class="skill__image">
+                    <title>gulp.js</title>
+                    <desc></desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#gulp"></use>
+                </svg>
+            </li>
+        </ul>
+
+        <ul class="skills-list">
+            <li class="skill">
+                <h4 class="skill__title">Atom</h4>
+                <h5 class="skill__description">Text editor</h5>
+                <svg class="skill__image">
+                    <symbol viewBox="0 0 256 256" preserveAspectRatio="xMidYMid" id="atom"><defs><linearGradient x1="50%" y1="3.961%" x2="50%" y2="100%" id="aa"><stop stop-color="#FDFDFD" offset="0%"/><stop stop-color="#CBCBCB" offset="100%"/></linearGradient><linearGradient x1="50%" y1="3.961%" x2="50%" y2="100%" id="ab"><stop stop-color="#B2E198" offset="0%"/><stop stop-color="#04A171" offset="100%"/></linearGradient></defs><circle fill="url(#aa)" cx="128" cy="128" r="127.858"/><circle fill="url(#ab)" cx="127.858" cy="128.142" r="116.907"/><g transform="translate(45.511 52.622)"><path d="M54.942 57.475a221.782 221.782 0 0 0-3.988 6.382 164.44 164.44 0 0 1-3.684-11.378c3.73-.534 7.695-.956 11.874-1.248a224.887 224.887 0 0 0-4.202 6.244zm103.138 7.474c-4.132-3.966-10.04-7.6-17.558-10.803-14.926-6.356-34.918-10.474-56.295-11.596a234.82 234.82 0 0 0-7.529-.276c16.321-19.481 32.083-29.846 41.263-30.195 1.944-.074 3.576.31 4.854 1.141 4.296 2.792 5.488 11.452 3.189 23.166a4.267 4.267 0 0 0 8.373 1.644c3.953-20.137-1.576-28.497-6.911-31.965-2.785-1.81-6.094-2.655-9.83-2.513-14.12.536-33.904 15.592-51.956 38.803-7.148.247-14.038.864-20.484 1.826a106.106 106.106 0 0 1-1.624-9.52c-1.619-13.345.367-22.817 5.311-25.339.795-.405 1.663-.638 2.655-.712 4.418-.333 10.652 2.636 17.542 8.358a4.267 4.267 0 0 0 5.452-6.564C65.682 3.054 57.732-.413 50.899.1c-2.113.159-4.095.704-5.892 1.62-4.593 2.343-7.732 6.828-9.33 13.332-1.368 5.57-1.562 12.513-.576 20.636.39 3.212.96 6.556 1.694 9.998-5.04 1.062-9.71 2.356-13.896 3.868C4.583 56.171.354 64.892.032 71.044c-.307 5.875 2.7 14.62 18.776 22.91a4.267 4.267 0 0 0 3.911-7.584C13.472 81.6 8.31 76.177 8.554 71.49c.346-6.605 11.417-13.596 30.274-17.535 1.747 6.309 3.99 12.861 6.68 19.505-6.777 12.723-11.722 25.262-14.287 36.416-1.832 7.97-2.368 14.89-1.592 20.567.907 6.63 3.56 11.417 7.882 14.228 2.205 1.432 5.176 2.553 9.078 2.553 5.66 0 13.275-2.357 23.344-9.539a4.267 4.267 0 1 0-4.955-6.947c-9.925 7.079-18.454 9.613-22.816 6.778-4.652-3.024-5.633-12.642-2.624-25.729 1.995-8.677 5.555-18.296 10.383-28.209a220.995 220.995 0 0 0 3.283 6.73c9.717 19.088 21.612 35.695 33.494 46.762 5.984 5.573 11.708 9.498 17.011 11.664 3.218 1.314 6.24 1.97 9.045 1.97 2.596 0 5.008-.562 7.216-1.688 4.43-2.26 7.511-6.521 9.157-12.666 1.41-5.263 1.726-11.828.942-19.512-1.543-15.11-7.253-33.54-16.077-51.892a4.267 4.267 0 0 0-7.69 3.698c8.406 17.485 13.833 34.908 15.277 49.06 1.271 12.446-.78 21.31-5.486 23.71-4.941 2.52-13.755-1.439-23.579-10.588-11.17-10.404-22.43-26.168-31.706-44.388a210.555 210.555 0 0 1-5.851-12.483A210.936 210.936 0 0 1 62.1 62.119a213.301 213.301 0 0 1 7.877-11.333c.7-.01 1.405-.017 2.115-.02 3.664-.01 7.592.091 11.688.306 20.404 1.07 39.368 4.95 53.398 10.925 12.341 5.256 19.535 11.704 19.245 17.25-.247 4.708-5.968 9.575-15.696 13.352a4.267 4.267 0 0 0 3.088 7.955c16.905-6.564 20.821-14.967 21.13-20.861.27-5.152-2.04-10.112-6.865-14.744z" fill="#F2F8F6"/><path d="M73.683 76.51c0 5.154 4.174 9.331 9.323 9.331s9.323-4.177 9.323-9.33c0-5.154-4.174-9.331-9.323-9.331-5.15 0-9.323 4.177-9.323 9.33" fill="#F1F8F3"/></g></symbol>
+                    <title>Atom</title>
+                    <desc></desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#atom"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Node.js</h4>
+                <h5 class="skill__description">Platform</h5>
+                <svg class="skill__image">
+                    <title>Node.js</title>
+                    <desc></desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#nodejs"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">WordPress</h4>
+                <h5 class="skill__description">CMS</h5>
+                <svg class="skill__image">
+                    <title>WordPress</title>
+                    <desc>Système de gestion de contenu.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#wordpress"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Composer</h4>
+                <h5 class="skill__description">Package manager</h5>
+                <svg class="skill__image">
+                    <title>Composer</title>
+                    <desc>Gestionnaire de dépendances PHP.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#composer"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Vagrant</h4>
+                <h5 class="skill__description">Environment</h5>
+                <svg class="skill__image">
+                    <title>Vagrant</title>
+                    <desc>Outil de création et de configuration d‘environnements de développement virtuel.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#vagrant"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Git</h4>
+                <h5 class="skill__description">Versionning</h5>
+                <svg class="skill__image">
+                    <title>Git</title>
+                    <desc>Outil de gestion de versions décentralisé.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#git"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Adobe</h4>
+                <h5 class="skill__description">Photoshop</h5>
+                <svg class="skill__image">
+                    <title>Adobe Photoshop</title>
+                    <desc>Logiciel de retouche, de traitement et de dessin assisté par ordinateur.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#photoshop"></use>
+                </svg>
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Adobe</h4>
+                <h5 class="skill__description">Illustrator</h5>
+                <svg class="skill__image">
+                    <title>Adobe Illustrator</title>
+                    <desc>Logiciel de création graphique vectorielle.</desc>
+                    <use xlink:href="assets/svg/sprite-skills.svg#illustrator"></use>
+                </svg>
+            </li>
+        </ul>
+
+        <h3 class="section__title">Systèmes d’exploitation</h3>
+        <ul class="skills-list skills-list--centered">
+            <li class="skill">
+                <h4 class="skill__title">GNU/Linux</h4>
+                <h5 class="skill__description">Debian</h5>
+                <img class="skill__image" src="assets/svg/system/debian.svg" alt="GNUX/Linux Debian" height="110" width="110">
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">GNU/Linux</h4>
+                <h5 class="skill__description">Ubuntu</h5>
+                <img class="skill__image" src="assets/svg/system/ubuntu.svg" alt="GNU/Linux Ubuntu" height="110" width="110">
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">macOS</h4>
+                <h5 class="skill__description">Sierra</h5>
+                <img class="skill__image" src="assets/svg/system/macos.svg" alt="macOS" height="110" width="110">
+            </li>
+            <li class="skill">
+                <h4 class="skill__title">Windows</h4>
+                <h5 class="skill__description">7/8 &amp; 10</h5>
+                <img class="skill__image" src="assets/svg/system/windows.svg" alt="Microsoft Windows" height="110" width="110">
+            </li>
+        </ul>
+
+        <h3 class="section__title">Navigateurs web</h3>
+        <ul class="skills-list skills-list--centered">
+            <li class="skill">
+                <h5 class="skill__description">Google</h5>
+                <h4 class="skill__title">Chrome</h4>
+                <img class="skill__image" src="assets/svg/browser/chrome.svg " alt="Chromium" height="110" width="110">
+            </li>
+            <li class="skill">
+                <h5 class="skill__description">Mozilla</h5>
+                <h4 class="skill__title">Firefox</h4>
+                <img class="skill__image" src="assets/svg/browser/firefox.svg" alt="Mozilla Firefox" height="110" width="110">
+            </li>
+            <li class="skill">
+                <h5 class="skill__description">Microsoft</h5>
+                <h4 class="skill__title">Edge</h4>
+                <img class="skill__image" src="assets/svg/browser/edge.svg" alt="Microsoft Edge" height="110" width="110">
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- /.skills -->
+
+<section class="section section--green formations" id="formations">
+    <h2 class="section__title">Formations</h2>
+    <div class="section__content">
+        <div class="formation">
+            <ul class="formation-list">
+                <li class="formation-listItem">
+                    <h3>Licence Concepteur Intégrateur Web</h3>
+                    <p>Siences-U Lille</p>
+                </li>
+                <li class="formation-listItem">
+                    <h3>DUT Informatique</h3>
+                    <p>Université Lille 1</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.formations -->
+{% endblock %}

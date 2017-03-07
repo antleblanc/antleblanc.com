@@ -1,0 +1,24 @@
+.main {
+  margin: 0 auto;
+
+  max-width: 1400px;
+
+  background-color: $white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 30px;
+  margin: 0 auto;
+
+  max-width: 1140px;
+}
+
+@include respond-to('large') {
+  .container {
+    flex-direction: row;
+  }
+}
+

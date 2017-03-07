@@ -1,0 +1,33 @@
+$alert-padding: 15px !default;
+$alert-radius:  4px !default;
+
+$alert-success: #5cb85c !default;
+$alert-info:    #5bc0de !default;
+$alert-warning: #f0ad4e !default;
+$alert-error:   #d9534f !default;
+
+.alert {
+  padding: $alert-padding;
+  margin-bottom: 20px;
+
+  color: $white;
+
+  border: 1px solid transparent;
+  border-radius: $alert-radius;
+}
+
+.alert--success {
+  background-color: $alert-success;
+}
+
+.alert--info {
+  background-color: $alert-info;
+}
+
+.alert--warning {
+  background-color: $alert-warning;
+}
+
+.alert--error {
+  background-color: $alert-error;
+}

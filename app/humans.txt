@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Antoine Leblanc -- Front-End Web Developer -- @antleblanc
+
+# THANKS
+
+  Élise
+  OVH
+  Konfiture
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3,
+  Normalize.css, Headroom.js

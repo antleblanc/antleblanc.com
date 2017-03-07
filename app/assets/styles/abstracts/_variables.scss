@@ -1,0 +1,134 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+/// Light grey
+/// @type Color
+$light-grey: #cfd8dc !default;
+
+/// Dark grey
+/// @type Color
+$mid-grey: #607d8b !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: #263238 !default;
+
+/// Brand primary color
+/// @type Color
+$brand-primary: #3aa17e !default;
+
+/// Brand secondary color
+/// @type Color
+$brand-secondary: #00537e !default;
+
+/// Brand light primary color
+/// @type Color
+$brand-green-light: #cde7de !default;
+
+/// White color
+/// @type Color
+$white: #fff !default;
+
+/// Black color
+/// @type Color
+$black: #000 !default;
+
+
+// -----------------------------------------------------------------------------
+// Texts
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: (
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  Arial,
+  sans-serif
+) !default;
+
+/// Alternative font family
+/// @type List
+$text-font-stack-alt: (
+  'Merriweather',
+  'Georgia',
+  'Times New Roman',
+  'Times',
+  serif
+) !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: (
+  'Courier New',
+  'DejaVu Sans Mono',
+  'Bitstream Vera Sans Mono',
+  'Monaco',
+  monospace
+) !default;
+
+$text-line-height: 1.6 !default;
+
+
+
+// -----------------------------------------------------------------------------
+// Layout
+// -----------------------------------------------------------------------------
+
+/// Container's maximum width
+/// Below that is 100%
+/// @type Length
+$max-width: 1200px !default;
+
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer's name
+/// @prop {Number} value - Z value mapped to the key
+$z-indexes: (
+  'modal': 5000,
+  'dropdown': 4000,
+  'default': 1,
+  'below': -1,
+) !default;
+
+
+
+// -----------------------------------------------------------------------------
+// Breakpoints
+// -----------------------------------------------------------------------------
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in em
+/// @see {mixin} respond-to
+$breakpoints: (
+  'small':  (min-width: 48em), // 768px
+  'medium': (min-width: 62em), // 992px
+  'large':  (min-width: 75em) // 1200px
+) !default;
+
+
+
+// -----------------------------------------------------------------------------
+// Configuration
+// -----------------------------------------------------------------------------
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

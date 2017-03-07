@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+//bower:scss
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+//endbower
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/animations',
+  'base/helpers',
+  'base/print';
+
+
+// 4. Layout-related sections
+@import
+  'layout/forms',
+  'layout/main',
+  'layout/header',
+  'layout/banner',
+  'layout/section',
+  'layout/container',
+  'layout/content',
+  'layout/sidebar',
+  'layout/footer';
+
+
+// 5. Components
+@import
+  'components/alert',
+  'components/button',
+  'components/card',
+  'components/dialog',
+  'components/fab',
+  'components/label',
+  'components/post',
+  'components/support-ie';
+
+
+// 6. Page-specific styles
+@import
+  'pages/home',
+  'pages/blog',
+  'pages/single',
+  'pages/legacy',
+  'pages/error';
+
+
+// 7. Themes
+@import
+  'themes/default';

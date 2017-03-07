@@ -1,0 +1,70 @@
+$label-default: $mid-grey !default;
+$label-success: #5cb85c !default;
+$label-info:    #5bc0de !default;
+$label-warning: #f0ad4e !default;
+$label-error:   #d9534f !default;
+
+$label-color:   $white;
+
+$label-radius:  3px !default;
+
+.label {
+  display: inline-block;
+  padding: 4px 10px;
+
+  position: relative;
+
+  font-family: $text-font-stack;
+  font-style: normal;
+  font-size: 65%;
+  font-weight: normal;
+
+  line-height: 1;
+
+  background-color: $label-success;
+  color: $label-color;
+  border-radius: $label-radius;
+
+  text-align: center;
+  text-decoration: none;
+
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+a.label {
+  transition: transform .1s linear;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(.9);
+  }
+}
+
+.label--default {
+  background-color: $label-default;
+}
+
+.label--success {
+  background-color: $label-success;
+  color: $label-color;
+}
+
+.label--info {
+  background-color: $label-info;
+  color: $label-color;
+}
+
+.label--warning {
+  background-color: $label-warning;
+  color: $label-color;
+}
+
+.label--error {
+  background-color: $label-error;
+  color: $label-color;
+}

@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+
+  height: 180px;
+
+  position: relative;
+
+  background-image: linear-gradient(45deg, $brand-secondary, $brand-primary);
+  color: $white;
+}
+
+@include respond-to('medium') {
+  .header {
+    height: 280px;
+  }
+}
