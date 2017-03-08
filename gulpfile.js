@@ -45,7 +45,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('lint', () =>
-  runSequence(['lint:styles'])
+  runSequence(['lint:styles', 'lint:scripts', 'lint:test'])
 );
 
 gulp.task('lint:styles', () => {
@@ -57,10 +57,14 @@ gulp.task('lint:styles', () => {
 
 gulp.task('lint:scripts', () => {
   return gulp.src('app/assets/scripts/**/*.js')
-    .pipe($.eslint({fix: true}))
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+    .pipe($.xo())
+    .pipe(gulp.dest('app/assets/scripts'));
+});
+
+gulp.task('lint:test', () => {
+  return gulp.src('test/spec/**/*.js')
+    .pipe($.xo())
+    .pipe(gulp.dest('test/spec'));
 });
 
 gulp.task('views', () => {
@@ -104,7 +108,7 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if(/main\.min\.css$/, $.header(banner, {pkg: pkg})))
+    .pipe($.if(/main\.min\.css$/, $.header(banner, {pkg})))
     .pipe($.if(/\.html$/, $.htmlmin({
       collapseWhitespace: true,
       minifyCSS: true,
@@ -186,6 +190,25 @@ gulp.task('serve:dist', ['default'], () => {
     server: 'dist',
     port: 3001
   });
+});
+
+gulp.task('serve:test', ['scripts'], () => {
+  browserSync({
+    notify: false,
+    port: 3002,
+    ui: false,
+    server: {
+      baseDir: 'test',
+      routes: {
+        '/assets/scripts': '.tmp/assets/scripts',
+        '/bower_components': 'bower_components'
+      }
+    }
+  });
+
+  gulp.watch('app/assets/scripts/**/*.js', ['scripts']);
+  gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
+  gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
 gulp.task('wiredep', () => {
