@@ -8,7 +8,6 @@ const $ = gulpLoadPlugins();
 const config = {
   mode: {
     symbol: {
-      dest: 'foo',
       sprite: 'sprite.svg',
       example: true
     }

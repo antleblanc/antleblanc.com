@@ -15,8 +15,6 @@ const reload = browserSync.reload;
 
 let dev = true;
 
-moment.locale('fr');
-
 gulp.task('styles', () => {
   return gulp.src('app/assets/styles/*.scss')
     .pipe($.plumber())
@@ -69,10 +67,9 @@ gulp.task('lint:test', () => {
 
 gulp.task('views', () => {
   const GOOGLE_ANALYTICS_USER_AGENT = 'UA-11768706-4';
+  moment.locale('fr');
 
-  return gulp.src([
-    'app/*.njk'
-  ])
+  return gulp.src('app/*.njk')
     .pipe($.nunjucksRender({
       path: 'app',
       data: {
@@ -87,9 +84,7 @@ gulp.task('views', () => {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('views:reload', ['views'], () => {
-  reload();
-});
+gulp.task('views:reload', ['views'], () => reload());
 
 /* eslint-disable camelcase */
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
