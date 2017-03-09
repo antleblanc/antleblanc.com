@@ -77,6 +77,7 @@ gulp.task('views', () => {
         experiencesKonfiture: (2016 - 2011),
         currentYear: moment().format('YYYY'),
         lastUpdate: moment().format('L'),
+        version: pkg.version,
         googleUserAgent: GOOGLE_ANALYTICS_USER_AGENT
       }
     }))
