@@ -6,10 +6,11 @@
 
   background-color: $white;
 
+  text-align: center;
+
   > p {
     margin: 0;
     font-size: .75rem;
-    text-align: center;
 
     > span {
       display: block;
@@ -20,10 +21,6 @@
 .footer-copyleft {
   display: inline-block;
   transform: rotate(-180deg);
-}
-
-.footer-nav {
-  text-align: center;
 }
 
 .footer-nav__item {
@@ -43,24 +40,16 @@
     text-decoration: underline;
   }
 
-  &::before {
+  &:not(:first-child)::before {
     content: '-';
     display: inline-block;
     padding: 0 5px;
   }
-
-  &:first-child::before {
-    display: none;
-  }
 }
 
 @include respond-to('small') {
-  .footer > p {
-    font-size: .875rem;
-
-    > span {
-      display: inline;
-    }
+  .footer > p > span {
+    display: inline;
   }
 
   .footer-nav {
