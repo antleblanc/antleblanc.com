@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
@@ -7,6 +8,7 @@ const del = require('del');
 const wiredep = require('wiredep').stream;
 const mainBowerFile = require('main-bower-files');
 const runSequence = require('run-sequence');
+const swPrecache = require('sw-precache');
 const moment = require('moment');
 const pkg = require('./package.json');
 
@@ -235,6 +237,33 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app/layouts'));
 });
 
+gulp.task('copy-sw-scripts', () => {
+  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js', 'app/assets/scripts/sw/runtime-caching.js'])
+    .pipe(gulp.dest('dist/assets/scripts/sw'));
+});
+
+gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
+  const rootDir = 'dist';
+  const filepath = path.join(rootDir, 'sw.js');
+
+  return swPrecache.write(filepath, {
+    cacheId: pkg.name,
+    importScripts: [
+      'assets/scripts/sw/sw-toolbox.js',
+      'assets/scripts/sw/runtime-caching.js'
+    ],
+    staticFileGlobs: [
+      `${rootDir}/assets/fonts/*.{eot,svg,ttf,woff,woff2}`,
+      `${rootDir}/assets/images/**/*`,
+      `${rootDir}/assets/scripts/**/*.js`,
+      `${rootDir}/assets/styles/**/*.css`,
+      `${rootDir}/assets/svg/**/*.svg`,
+      `${rootDir}/*.{html,json,xml,txt,webapp}`
+    ],
+    stripPrefix: rootDir + '/'
+  });
+});
+
 gulp.task('build', ['lint', 'html', 'images', 'svg', 'fonts', 'copy'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
@@ -245,6 +274,7 @@ gulp.task('default', () => {
     runSequence(
       ['clean', 'wiredep'],
       'build',
+      'generate-service-worker',
       resolve
     );
   });
