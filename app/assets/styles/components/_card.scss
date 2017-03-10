@@ -133,5 +133,20 @@
 
       @include triangle(20px, #fff, left);
     }
+
+    &::after {
+      content: ' ';
+
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      top: 20px;
+      left: -36px;
+
+      background-color: $dark-grey;
+      border-radius: 50%;
+      border: 3px solid $mid-grey;
+    }
   }
 }

@@ -216,36 +216,6 @@
 // Formations
 // -----------------------------------------------------------------------------
 
-.formations {
-  &::before {
-    content: '\f19d';
-
-    display: block;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 1;
-
-    font-family: 'FontAwesome';
-    font-size: 21.625rem;
-
-    transform: translate(20%, 30%);
-
-    visibility: hidden;
-
-    @include respond-to('medium') {
-      visibility: visible;
-    }
-  }
-
-  .section-title,
-  .section-content {
-    position: relative;
-    z-index: 2;
-  }
-}
-
 .formation-list {
   padding: 0;
   list-style-type: none;
