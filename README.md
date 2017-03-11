@@ -24,7 +24,7 @@ $ yarn install # it will run `bower install` under the hood.
 #### Developement
 
 ```sh
-$ npm run start
+$ npm start
 ```
 
 #### Build
@@ -36,7 +36,7 @@ $ npm run build
 #### Test
 
 ```sh
-$ npm run test
+$ npm test
 ```
 
 #### Deployment
