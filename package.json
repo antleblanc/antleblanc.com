@@ -80,7 +80,6 @@
       "mocha"
     ],
     "globals": [
-      "WebFontConfig",
       "Headroom"
     ],
     "ignores": [
