@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 'use strict';
 
 const gulp = require('gulp');
@@ -18,3 +19,4 @@ gulp.task('deploy', ['default'], () => {
       destination: config.destination
     }));
 });
+/* eslint-enable import/no-unresolved */
