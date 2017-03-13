@@ -15,7 +15,7 @@
   },
   "scripts": {
     "postinstall": "bower install",
-    "test": "xo && gulp lint && gulp w3c",
+    "test": "xo && gulp lint",
     "start": "gulp serve",
     "build": "gulp",
     "publish": "gulp deploy"
