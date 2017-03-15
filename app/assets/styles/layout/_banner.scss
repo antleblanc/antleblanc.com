@@ -97,9 +97,6 @@
     repeat: no-repeat;
     image: image('antleblanc-logo.svg');
   }
-  // background-position: center center;
-  // background-repeat: no-repeat;
-  // background-image: image('antleblanc-logo.svg');
 
   > span {
     @include hide-text;
