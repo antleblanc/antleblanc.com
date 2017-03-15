@@ -1,16 +1,16 @@
 .footer {
-  margin: 0 auto;
-  padding: 1.375em 0;
+  padding: 1.375em;
 
   position: relative;
 
   background-color: $white;
+  color: $mid-grey;
 
   text-align: center;
 
   > p {
     margin: 0;
-    font-size: .75rem;
+    font-size: 1rem;
 
     > span {
       display: block;
@@ -48,8 +48,12 @@
 }
 
 @include respond-to('small') {
-  .footer > p > span {
-    display: inline;
+  .footer {
+    text-align: inherit;
+
+    > p > span {
+      display: inline;
+    }
   }
 
   .footer-nav {

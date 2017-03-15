@@ -21,7 +21,7 @@ $label-radius:  3px !default;
 
   line-height: 1;
 
-  background-color: $label-success;
+  background-color: $label-default;
   color: $label-color;
   border-radius: $label-radius;
 
@@ -43,10 +43,6 @@ a.label {
   &:active {
     transform: scale(.9);
   }
-}
-
-.label--default {
-  background-color: $label-default;
 }
 
 .label--success {
