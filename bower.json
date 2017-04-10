@@ -31,7 +31,7 @@
     "developer"
   ],
   "dependencies": {
-    "font-awesome": "fontawesome#^4.6.2",
+    "font-awesome": "fontawesome#^4.7.0",
     "headroom-bower": "^0.9.5"
   },
   "devDependencies": {
