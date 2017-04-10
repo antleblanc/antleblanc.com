@@ -1,11 +1,3 @@
-.main {
-  margin: 0 auto;
-
-  max-width: 1400px;
-
-  background-color: $white;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -21,4 +13,3 @@
     flex-direction: row;
   }
 }
-
