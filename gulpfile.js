@@ -75,8 +75,8 @@ gulp.task('views', () => {
     .pipe($.nunjucksRender({
       path: 'app',
       data: {
-        experiencesOvh: moment().diff(moment([2016, 3, 1]), 'months'),
-        experiencesKonfiture: (2016 - 2011),
+        experiencesOvh: moment().diff(moment('20160301'), 'year'),
+        experiencesKonfiture: moment('20160301').diff(moment('20110301'), 'year'),
         currentYear: moment().format('YYYY'),
         lastUpdate: moment().format('L'),
         version: pkg.version,
