@@ -1,8 +1,5 @@
 .card {
   padding: 20px;
-  // margin-left: -10px;
-  // margin-right: -10px;
-
   position: relative;
 
   background-color: $white;
@@ -97,15 +94,11 @@
 }
 
 .card-list__item {
-  font-family: $text-font-stack-alt;
-  font-style: normal;
   font-size: .875rem;
-
-  color: $mid-grey;
+  color: $dark-grey;
 
   @include respond-to('small') {
-    font-size: .9375rem;
-    font-style: italic;
+    font-size: 1rem;
   }
 }
 
