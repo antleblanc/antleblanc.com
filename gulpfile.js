@@ -27,7 +27,9 @@ gulp.task('styles', () => {
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({
-      browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
+      browsers: ['last 2 versions'],
+      cascade: false,
+      flexbox: false
     }))
     .pipe($.if(dev, $.sourcemaps.write()))
     .pipe(gulp.dest('.tmp/assets/styles'))
