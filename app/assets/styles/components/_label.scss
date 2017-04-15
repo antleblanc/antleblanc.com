@@ -1,10 +1,11 @@
-$label-default: $mid-grey !default;
-$label-success: #5cb85c !default;
-$label-info:    #5bc0de !default;
-$label-warning: #f0ad4e !default;
-$label-error:   #d9534f !default;
+$label-default:       $dark-grey !default;
+$label-success:       #128a0c !default;
+$label-info:          #0366d6 !default;
+$label-warning:       #fbbc05 !default;
+$label-error:         #ee0701 !default;
 
-$label-color:   $white;
+$label-color:         $white;
+$label-color-inverse: $black;
 
 $label-radius:  3px !default;
 
@@ -57,7 +58,7 @@ a.label {
 
 .label--warning {
   background-color: $label-warning;
-  color: $label-color;
+  color: $label-color-inverse;
 }
 
 .label--error {
