@@ -17,7 +17,7 @@
         navigator.serviceWorker.register('sw.js').then(registration => {
           registration.onupdatefound = () => {
             if (navigator.serviceWorker.controller) {
-              let installingWorker = registration.installing;
+              const installingWorker = registration.installing;
 
               installingWorker.onstatechange = () => {
                 switch (installingWorker.state) {

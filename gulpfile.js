@@ -13,7 +13,7 @@ const moment = require('moment');
 const pkg = require('./package.json');
 
 const $ = gulpLoadPlugins();
-const reload = browserSync.reload;
+const {reload} = browserSync;
 
 let dev = true;
 

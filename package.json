@@ -84,7 +84,11 @@
     "ignores": [
       "archives/**"
     ],
-    "space": true
+    "space": true,
+    "rules": {
+      "promise/prefer-await-to-then": "off",
+      "unicorn/regex-shorthand": "off"
+    }
   },
   "private": true
 }
