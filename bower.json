@@ -31,19 +31,11 @@
     "developer"
   ],
   "dependencies": {
-    "font-awesome": "fontawesome#^4.7.0",
-    "headroom-bower": "^0.9.5"
+    "font-awesome": "fontawesome#^4.7.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
-  },
-  "overrides": {
-    "headroom-bower": {
-      "main": [
-        "dist/headroom.js"
-      ]
-    }
   },
   "private": true
 }

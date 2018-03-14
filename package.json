@@ -11,7 +11,7 @@
     "url": "antleblanc.me"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "postinstall": "bower install",
@@ -80,9 +80,6 @@
       "browser",
       "node",
       "mocha"
-    ],
-    "globals": [
-      "Headroom"
     ],
     "ignores": [
       "archives/**"
