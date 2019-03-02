@@ -70,7 +70,6 @@ gulp.task('lint:test', () => {
 });
 
 gulp.task('views', () => {
-  const GOOGLE_ANALYTICS_USER_AGENT = 'UA-11768706-4';
   moment.locale('fr');
 
   return gulp.src('app/*.njk')
@@ -81,8 +80,7 @@ gulp.task('views', () => {
         experiencesKonfiture: moment('20160301').diff(moment('20110301'), 'year'),
         currentYear: moment().format('YYYY'),
         lastUpdate: moment().format('L'),
-        version: pkg.version,
-        googleUserAgent: GOOGLE_ANALYTICS_USER_AGENT
+        version: pkg.version
       }
     }))
     .pipe(gulp.dest('.tmp'))
