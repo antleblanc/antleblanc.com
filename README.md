@@ -18,7 +18,7 @@
 $ cd ~/Sites
 $ git clone https://github.com/antleblanc/antleblanc.me
 $ cd antleblanc.me
-$ yarn install # it will run `bower install` under the hood.
+$ npm install # it will run `bower install` under the hood.
 ```
 
 ## Usage
