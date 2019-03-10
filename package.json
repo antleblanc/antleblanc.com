@@ -87,7 +87,9 @@
     ],
     "space": true,
     "rules": {
+      "eslint-comments/no-unused-disable": "off",
       "promise/prefer-await-to-then": "off",
+      "unicorn/catch-error-name": "off",
       "unicorn/regex-shorthand": "off"
     }
   },
