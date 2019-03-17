@@ -56,7 +56,6 @@ $ npm run publish
 ## Related
 
 - [dotfiles](https://github.com/antleblanc/dotfiles) — My dotfiles
-- [sublime-text-3-preferences](https://github.com/antleblanc/sublime-text-3-preferences) — Sublime Text 3 User preferences
 - [sass-boilerplate](https://github.com/antleblanc/sass-boilerplate) — Sass boilerplate
 
 ## License
