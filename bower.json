@@ -30,9 +30,7 @@
     "web",
     "developer"
   ],
-  "dependencies": {
-    "font-awesome": "fontawesome#^4.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"

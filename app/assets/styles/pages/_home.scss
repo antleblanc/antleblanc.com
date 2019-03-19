@@ -75,29 +75,6 @@
 // -----------------------------------------------------------------------------
 
 .experiences {
-  &::before {
-    content: '\f085';
-
-    display: block;
-
-    position: absolute;
-    top: 0;
-    z-index: 1;
-
-    font-family: 'FontAwesome';
-    font-size: 21.625rem;
-
-    color: $light-grey;
-
-    transform: translate(-30%, -30%);
-
-    visibility: hidden;
-
-    @include respond-to('medium') {
-      visibility: visible;
-    }
-  }
-
   .section__title,
   .section__content {
     position: relative;
