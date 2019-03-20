@@ -49,7 +49,7 @@ $ npm run publish
 
 ## Resources
 
-- [Google Web Starter Kit](https://github.com/google/web-start-kit)
+- [Google Web Starter Kit](https://github.com/google/web-starter-kit)
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate) & [Mobile Boilerplate](https://github.com/h5bp/mobile-boilerplate)
 - [Yeoman](http://yeoman.io): [Generator Gulp Webapp](https://github.com/yeoman/generator-gulp-webapp)
 
