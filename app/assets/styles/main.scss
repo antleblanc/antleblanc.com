@@ -17,7 +17,6 @@
   'base/base',
   'base/fonts',
   'base/typography',
-  'base/animations',
   'base/helpers',
   'base/print';
 
@@ -39,8 +38,6 @@
   'components/alert',
   'components/button',
   'components/card',
-  'components/dialog',
-  'components/fab',
   'components/label',
   'components/post',
   'components/support-ie';
@@ -49,10 +46,4 @@
 // 6. Page-specific styles
 @import
   'pages/home',
-  'pages/legacy',
   'pages/error';
-
-
-// 7. Themes
-@import
-  'themes/default';
