@@ -5,8 +5,6 @@ const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
-const wiredep = require('wiredep').stream;
-const mainBowerFile = require('main-bower-files');
 const runSequence = require('run-sequence');
 const swPrecache = require('sw-precache');
 const moment = require('moment');
@@ -47,7 +45,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('lint', () =>
-  runSequence(['lint:styles', 'lint:scripts', 'lint:test'])
+  runSequence(['lint:styles', 'lint:scripts'])
 );
 
 gulp.task('lint:styles', () => {
@@ -61,12 +59,6 @@ gulp.task('lint:scripts', () => {
   return gulp.src('app/assets/scripts/**/*.js')
     .pipe($.xo())
     .pipe(gulp.dest('app/assets/scripts'));
-});
-
-gulp.task('lint:test', () => {
-  return gulp.src('test/spec/**/*.js')
-    .pipe($.xo())
-    .pipe(gulp.dest('test/spec'));
 });
 
 gulp.task('views', () => {
@@ -128,12 +120,6 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/assets/images'));
 });
 
-gulp.task('fonts', () => {
-  return gulp.src(mainBowerFile('**/*.{eot,svg,ttf,woff,woff2}', () => {})
-    .concat('app/assets/fonts/**/*'))
-    .pipe($.if(dev, gulp.dest('.tmp/assets/fonts'), gulp.dest('dist/assets/fonts')));
-});
-
 gulp.task('copy', () => {
   return gulp.src([
     'app/*.*',
@@ -148,32 +134,26 @@ gulp.task('clean', () => del(['.tmp', 'dist/*'], {dot: true}));
 
 gulp.task('serve', () => {
   runSequence(
-    ['clean', 'wiredep'],
-    ['views', 'styles', 'scripts', 'fonts'],
+    'clean',
+    ['views', 'styles', 'scripts'],
     () => {
       browserSync({
         notify: false,
-        logPrefix: 'antleblanc.me',
+        logPrefix: pkg.author.url,
         server: {
-          baseDir: ['.tmp', 'app'],
-          routes: {
-            '/bower_components': 'bower_components'
-          }
+          baseDir: ['.tmp', 'app']
         },
         port: 3000
       });
 
       gulp.watch([
         'app/assets/scripts/**/*.js',
-        'app/assets/images/**/*',
-        '.tmp/assets/fonts/**/*'
+        'app/assets/images/**/*'
       ]).on('change', reload);
 
       gulp.watch('app/**/*.{html,njk}', ['views:reload']);
       gulp.watch('app/assets/styles/**/*.scss', ['styles']);
       gulp.watch('app/assets/scripts/**/*.js', ['scripts']);
-      gulp.watch('app/assets/fonts/**/*', ['fonts']);
-      gulp.watch('bower.json', ['wiredep', 'fonts']);
     }
   );
 });
@@ -186,53 +166,6 @@ gulp.task('serve:dist', ['default'], () => {
     server: 'dist',
     port: 3001
   });
-});
-
-gulp.task('serve:test', ['scripts'], () => {
-  browserSync({
-    notify: false,
-    port: 3002,
-    ui: false,
-    server: {
-      baseDir: 'test',
-      routes: {
-        '/assets/scripts': '.tmp/assets/scripts',
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
-
-  gulp.watch('app/assets/scripts/**/*.js', ['scripts']);
-  gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
-
-gulp.task('wiredep', () => {
-  gulp.src('app/assets/styles/*.scss')
-    .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('app/assets/styles'));
-
-  gulp.src('app/layouts/*.njk')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./,
-      fileTypes: {
-        njk: {
-          block: /(([ \t]*)<!--\s*bower:*(\S*)\s*-->)(\n|\r|.)*?(<!--\s*endbower\s*-->)/gi,
-          detect: {
-            js: /<script.*src=['"]([^'"]+)/gi,
-            css: /<link.*href=['"]([^'"]+)/gi
-          },
-          replace: {
-            js: '<script src="{{filePath}}"></script>',
-            css: '<link rel="stylesheet" href="{{filePath}}" />'
-          }
-        }
-      }
-    }))
-    .pipe(gulp.dest('app/layouts'));
 });
 
 gulp.task('copy-sw-scripts', () => {
@@ -262,7 +195,7 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
   });
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'svg', 'fonts', 'copy'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'svg', 'copy'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -270,7 +203,7 @@ gulp.task('default', () => {
   return new Promise(resolve => {
     dev = false;
     runSequence(
-      ['clean', 'wiredep'],
+      'clean',
       'build',
       'generate-service-worker',
       resolve
