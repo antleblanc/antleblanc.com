@@ -4,7 +4,7 @@
 
   position: relative;
 
-  background: $white;
+  background: $black;
 
   overflow: hidden;
 
@@ -20,16 +20,12 @@
 }
 
 .section--gray {
-  background-color: #f5f8fa;
-}
-
-.section--dark {
   background-color: $dark-grey;
   color: $light-grey;
 }
 
-.section--green {
-  background-color: $brand-primary;
+.section--blue {
+  background-color: $brand-secondary;
   color: $white;
 }
 

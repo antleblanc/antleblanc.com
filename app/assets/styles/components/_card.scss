@@ -2,7 +2,7 @@
   padding: 20px;
   position: relative;
 
-  background-color: $white;
+  background-color: $black;
   border-radius: 3px;
 
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, .15);
@@ -78,8 +78,6 @@
   font-style: italic;
   font-weight: 700;
 
-  color: $dark-grey;
-
   @include respond-to('small') {
     position: absolute;
     top: 100px;
@@ -95,7 +93,6 @@
 
 .card-list__item {
   font-size: .875rem;
-  color: $dark-grey;
 
   @include respond-to('small') {
     font-size: 1rem;
@@ -111,7 +108,8 @@
     position: relative;
     left: 64px;
 
-    background-color: $white;
+    background-color: $black;
+    border: 2px solid $light-grey;
     border-radius: 3px;
 
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, .15));
@@ -121,10 +119,10 @@
 
       position: absolute;
       top: 20px;
-      left: -10px;
+      left: -12px;
       z-index: 2;
 
-      @include triangle(20px, #fff, left);
+      @include triangle(20px, $mid-grey, left);
     }
 
     &::after {
@@ -135,7 +133,7 @@
 
       position: absolute;
       top: 20px;
-      left: -36px;
+      left: -38px;
 
       background-color: $dark-grey;
       border-radius: 50%;
