@@ -15,9 +15,6 @@
 ## Install
 
 ```sh
-$ cd ~/Sites
-$ git clone https://github.com/antleblanc/antleblanc.me
-$ cd antleblanc.me
 $ npm install
 ```
 
