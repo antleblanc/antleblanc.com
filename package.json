@@ -1,34 +1,48 @@
 {
   "name": "antleblanc",
   "version": "0.2.1",
+  "private": true,
   "description": "My resume.",
-  "license": "MIT",
-  "repository": "antleblanc/antleblanc.me",
+  "keywords": [
+    "antoine",
+    "developer",
+    "front-end",
+    "leblanc",
+    "personal",
+    "resume",
+    "web",
+    "website"
+  ],
   "homepage": "https://antleblanc.me",
+  "repository": "antleblanc/antleblanc.me",
+  "license": "MIT",
   "author": {
     "name": "Antoine Leblanc",
     "email": "ant.leblanc@gmail.com",
     "url": "antleblanc.me"
   },
-  "engines": {
-    "node": ">=8"
-  },
   "scripts": {
-    "test": "xo && gulp lint",
-    "start": "gulp serve",
     "build": "gulp",
-    "publish": "gulp deploy"
+    "publish": "gulp deploy",
+    "start": "gulp serve",
+    "test": "xo && gulp lint"
   },
-  "keywords": [
-    "resume",
-    "personal",
-    "website",
-    "antoine",
-    "leblanc",
-    "front-end",
-    "web",
-    "developer"
-  ],
+  "xo": {
+    "envs": [
+      "browser",
+      "node"
+    ],
+    "ignores": [
+      "archives/**"
+    ],
+    "rules": {
+      "eslint-comments/no-unused-disable": "off",
+      "promise/prefer-await-to-then": "off",
+      "unicorn/catch-error-name": "off",
+      "unicorn/regex-shorthand": "off"
+    },
+    "space": true
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
@@ -72,21 +86,7 @@
     "sw-toolbox": "^3.6.0",
     "xo": "*"
   },
-  "xo": {
-    "envs": [
-      "browser",
-      "node"
-    ],
-    "ignores": [
-      "archives/**"
-    ],
-    "space": true,
-    "rules": {
-      "eslint-comments/no-unused-disable": "off",
-      "promise/prefer-await-to-then": "off",
-      "unicorn/catch-error-name": "off",
-      "unicorn/regex-shorthand": "off"
-    }
-  },
-  "private": true
+  "engines": {
+    "node": ">=8"
+  }
 }
