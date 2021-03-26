@@ -4,14 +4,6 @@
 
 [![Build Status](https://travis-ci.org/antleblanc/antleblanc.me.svg?branch=master)](https://travis-ci.org/antleblanc/antleblanc.me)
 
-## Table of Contents
-
-- [Install](#install)
-- [Usage](#usage)
-- [Resources](#resources)
-- [Related](#related)
-- [License](#license)
-
 ## Install
 
 ```sh
