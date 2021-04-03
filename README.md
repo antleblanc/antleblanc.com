@@ -2,8 +2,6 @@
 
 > My resume.
 
-[![Build Status](https://travis-ci.org/antleblanc/antleblanc.me.svg?branch=master)](https://travis-ci.org/antleblanc/antleblanc.me)
-
 ## Install
 
 ```sh
