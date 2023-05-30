@@ -161,7 +161,7 @@ gulp.task('serve', () => {
 gulp.task('serve:dist', ['default'], () => {
   browserSync({
     notify: false,
-    logPrefix: 'antleblanc.me',
+    logPrefix: 'antleblanc.com',
     https: true,
     server: 'dist',
     port: 3001
