@@ -1,4 +1,4 @@
-# [![screenshot](media/screenshot.png)](https://antleblanc.me)
+# [![screenshot](media/screenshot.png)](https://antleblanc.com)
 
 > My resume.
 
@@ -47,4 +47,4 @@ $ npm run publish
 
 ## License
 
-MIT &copy; [Antoine Leblanc](https://antleblanc.me)
+MIT &copy; [Antoine Leblanc](https://antleblanc.com)
