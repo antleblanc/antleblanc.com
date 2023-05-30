@@ -13,13 +13,13 @@
     "web",
     "website"
   ],
-  "homepage": "https://antleblanc.me",
-  "repository": "antleblanc/antleblanc.me",
+  "homepage": "https://antleblanc.com",
+  "repository": "antleblanc/antleblanc.com",
   "license": "MIT",
   "author": {
     "name": "Antoine Leblanc",
     "email": "ant.leblanc@gmail.com",
-    "url": "antleblanc.me"
+    "url": "antleblanc.com"
   },
   "scripts": {
     "build": "gulp",
